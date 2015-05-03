@@ -120,14 +120,14 @@ payload = {
         ],
         "applications": [
             {
-                "raw": "12502;UDP"
+                "raw": "12503;UDP"
             }
         ]
     },
     "actions": [
         "DENY"
     ],
-    "policyName": "learningLab-mandy-4-29"
+    "policyName": "learningLab-firodj-4-29"
 }
 
 

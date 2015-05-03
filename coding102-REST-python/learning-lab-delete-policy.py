@@ -29,7 +29,8 @@ controller_url = "https://sandboxapic.cisco.com"
 
 # specify url to delete a policy
 # Insert the id for the policy that you created into the URL
-delete_policy_url = controller_url + '/api/v0/policy/12100233-7c71-4602-ab74-20b87c24fa03'
+policy_id = '2de2e848-d5b4-49c2-8f70-b585c261fa07'
+delete_policy_url = controller_url + '/api/v0/policy/' + policy_id
 
 # Use requests.post to do a DELETE to the policy API
 policy_delete_response = requests.delete(delete_policy_url, verify=False)

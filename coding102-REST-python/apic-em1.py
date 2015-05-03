@@ -20,11 +20,20 @@
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
 
-
+# NOTE: requests needs updates 'certifi' pacakge to verify certificates
 import requests
 
 # put the ip address or dns of your apic-em controller in this url
 url = 'https://sandboxapic.cisco.com/api/v0/host/1/3'
+
+# If you want verify certificates, do this:
+#
+# from requests.packages import urllib3
+# ca_certs = "/etc/ssl/certs/ca-certificates.crt"  # Or wherever it lives.
+# http = urllib3.PoolManager(
+#     cert_reqs='CERT_REQUIRED', # Force certificate check.
+#     ca_certs=ca_certs,         # Path to your certificate bundle.
+# )
 
 # this statement performs a GET on the specified url
 response = requests.get(url, verify=False)
